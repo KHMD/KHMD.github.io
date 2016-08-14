@@ -1,0 +1,271 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
+
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	background-image: url('../img/bg.png');
+	background-position:;
+	color: #404d5b;
+	font-weight: 500;
+	font-size: 1.05em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
+a {
+	color:#FF5274;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #AF3F55;
+}
+
+.container {
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.content {
+	font-size: 150%;
+	padding: 1em 1em;
+}
+.content-box {
+	font-size: 120%;
+	padding: 2em 3em;
+}
+
+
+.content h2 {
+	margin: 0 0 0.2em;
+	opacity: 1;
+}
+
+.content p {
+	margin: 1em 0;
+	padding: 1em 0 0 0;
+	font-size: 1em;
+}
+
+.content-box p {
+  text-align: left;
+  font-size: 1em;
+}
+.content-box > p >span, .content-box > h2 > span, #timeline span {
+  color: #AF3F55;
+}
+.bgcolor-1 { background: #f0efee; 
+	text-align: center;}
+.bgcolor-2 { background: #1B1B25; }
+.bgcolor-3 { background: #e8e8e8; 
+	text-align: center;}
+.bgcolor-4 { background: #2f3238; color: #fff; }
+.bgcolor-5 { background: #df6659; color: #521e18; }
+.bgcolor-6 { background: #2fa8ec; color: #fff;}
+.bgcolor-7 { background: #d0d6d6; 
+text-align: center;}
+.bgcolor-8 { background: #3d4444; color: #fff; }
+.bgcolor-9 { background: #8781bd; color: #fff; }
+.bgcolor-10 { background: #6C6C6C; }
+
+body .nomargin-bottom {
+	margin-bottom: 0;
+}
+
+/* Header */
+.header {
+	padding: 4em 190px 4em;
+	letter-spacing: -1px;
+	height: 100vh;
+	color: #9FA8B3;
+}
+.header h1 {
+	font-weight: 800;
+	font-size: 4em;
+	line-height: 1;
+	margin: 0.25em 0 0;
+}
+.header h3 {
+	font-weight: 700;
+	font-size: 3em;
+	line-height: 1;
+	float:right;
+	margin: 0.5em 0 0;
+}
+
+.header h1 span {
+	display: block;
+	font-size: 50%;
+	font-weight: 400;
+	padding: 0.325em 0 1em 0;
+	color: #c3c8cd;
+}
+.header img {
+    float:right;
+}
+@media (min-width:992px) {
+	.header{
+		padding: 6em 190px 4em;
+	}
+}
+@media (max-width:650px) {
+	.header {
+		padding: 2em 40px 3em 120px;
+	}
+	.header h1{
+		font-size: 3.8em;
+	}
+	.header h3{
+		font-size: 2.8em;
+	}
+}
+#second{
+	padding: 100px;
+}
+#second span{
+	text-align: left;
+	font-size: 38px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.footer {
+	text-align: center;
+	color: #90949E;
+}
+
+
+/*Timeline*/
+
+#contentl {
+  margin-top: 50px;
+  text-align: center;
+}
+
+section.timeline-outer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1.header {
+  font-size: 50px;
+  line-height: 70px;
+}
+/* Timeline */
+
+.timeline {
+  border-left: 8px solid #42A5F5;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #333;
+  margin: 50px auto;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  padding: 20px;
+  list-style: none;
+  text-align: left;
+}
+
+.timeline h1,
+.timeline h2,
+.timeline h3 {
+  font-size: 1.4em;
+}
+
+.timeline .eventl {
+  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline .eventl:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.timeline .eventl:before,
+.timeline .eventl:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline .eventl:before {
+  left: -177.5px;
+  color: #212121;
+  content: attr(data-date);
+  text-align: right;
+  /*  font-weight: 100;*/
+  
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.timeline .eventl:after {
+  box-shadow: 0 0 0 8px #42A5F5;
+  left: -30px;
+  background: #212121;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 5px;
+}
+/**/
+/*——————————————
+Responsive Stuff
+———————————————*/
+
+@media (max-width: 945px) {
+  .timeline .event::before {
+    left: 0.5px;
+    top: 20px;
+    min-width: 0;
+    font-size: 13px;
+  }
+  .timeline h3 {
+    font-size: 16px;
+  }
+  .timeline p {
+    padding-top: 20px;
+  }
+  section.lab h3.card-title {
+    padding: 5px;
+    font-size: 16px
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline .eventl::before {
+    left: 0.5px;
+    top: 20px;
+    min-width: 0;
+    font-size: 13px;
+  }
+  .timeline .eventl:nth-child(1)::before,
+  .timeline .eventl:nth-child(3)::before,
+  .timeline .eventl:nth-child(5)::before {
+    top: 38px;
+  }
+  .timeline h3 {
+    font-size: 16px;
+  }
+  .timeline p {
+    padding-top: 20px;
+  }
+}
+
+.werw{
+	font-size: 40px;
+	margin: 2%;
+}
+
+.werwe{
+	color: #66707b;
+}

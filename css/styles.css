@@ -1,9 +1,149 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Nunito:400,300,700);
+/* 03. TEAM SETTINGS ============================================ */
+
+#team {
+  padding: 60px 0;
+  background:url("../img/bg.jpg") center;
+  background-size: cover;
+  
+  text-align: center; 
+}
+
+#team p {
+  padding: 20px 0 60px;
+  color:#fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+#team h3 {
+  color:#fff;
+  padding: 0 0 15px;
+  font-family: 'norwester';
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+#team h4  {
+  color:#fff;
+  margin-top: -20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+#team h4 span {
+  display: block;
+  position: relative;
+  left: -40px;
+  top: 10px;
+  font-size: 20px;
+  background: none;
+  padding: 0;
+}
+
+#team img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 50%; 
+  border: 15px solid transparent; 
+  box-shadow: 2px 2px 0px rgba(0,0,0, 0.18);
+  transition: all 0.1s ease-in;
+}
+  
+#team img:hover {
+  border: 15px solid #3980C9;
+  position: relative;
+  z-index: 10;
+  transition: all 0.1s ease-in; 
+}
+
+#team span {
+  color:#fff;
+  padding: 8px 20px;
+  position: relative;
+  top: -64px;
+  left: -42px;
+  display: inline-block;
+  background: #4593e3;
+  border-radius: 0 16px 16px 0;
+  font-size: 16px;
+}
+
+/* Member Image Hover Effect */
+.hover_img {
+  display: none
+}
+
+.member-profile:hover .unhover_img{
+  display: none;
+}
+
+.member-profile:hover .hover_img {
+  display: block;
+}
+
+/* Social Networks Meta */
+#team li {display: inline-block; padding: 0 6px; font-size: 18px;}
+#team li a {color: #FFA500; transition: all 0.1s ease-in;}
+#team li a:hover {color: #FFA500;}
+
+
+
+.row1 .col-md-3 {
+  padding-bottom: 40px;
+  width: 100%;
+  margin-left : auto;
+  margin-right: auto;
+}
+.row2 .col-md-3 {
+  padding-bottom: 40px;
+  width: 50%;
+  margin-left : auto;
+  margin-right: auto;
+}
+
+.row3 .col-md-3 {
+  padding-bottom: 40px;
+  width: 25%;
+  margin-left : auto;
+  margin-right: auto;
+}
+
+/* Mobile Devices Optimization */
+@media (min-width: 568px) and (max-width: 992px) {
+
+  .row1 .col-md-3, .row2 .col-md-3, .row3 .col-md-3 {
+    display: inline-block;
+    margin-left: auto;
+    margin-right:auto;
+  }
+
+  #team img {max-width: 300px;}
+
+}
 /* ==========================================================================
+
 Typography
 ========================================================================== */
+
+@font-face {
+    font-family: 'norwester';
+  src: url('./fonts/norwester/norwester.eot');
+    src: url('./fonts/norwester/norwester.eot?iefix') format('embedded-opentype'),
+     url('./fonts/norwester/norwester.ttf');
+    font-weight: normal;
+}
+
+body {
+padding: 0 0 15px;
+  font-family: 'norwester';
+  font-size: 13px;
+  font-weight: 300;
+}
+
 p {
   font-size: 17px;
   line-height: 29px;

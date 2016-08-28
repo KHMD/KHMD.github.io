@@ -94,28 +94,22 @@
 
 .row1 .col-md-3 {
   padding-bottom: 40px;
-  width: 100%;
+  width: 33.3%;
   margin-left : auto;
   margin-right: auto;
 }
 .row2 .col-md-3 {
   padding-bottom: 40px;
-  width: 50%;
+  width: 20%;
   margin-left : auto;
   margin-right: auto;
 }
 
-.row3 .col-md-3 {
-  padding-bottom: 40px;
-  width: 25%;
-  margin-left : auto;
-  margin-right: auto;
-}
 
 /* Mobile Devices Optimization */
 @media (min-width: 568px) and (max-width: 992px) {
 
-  .row1 .col-md-3, .row2 .col-md-3, .row3 .col-md-3 {
+  .row1 .col-md-3, .row2 .col-md-3 {
     display: inline-block;
     margin-left: auto;
     margin-right:auto;

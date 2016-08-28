@@ -1383,6 +1383,8 @@ you can use the generic selector below, but it's slower:
 
 
 
-
+.col-md-4 {
+  width: 25%;
+}
 
 

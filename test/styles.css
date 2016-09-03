@@ -1,16 +1,20 @@
 body {
-	display: flex;
-	min-height: 100vh;
+
 	height: 100%;
 	flex-direction: column;
 	font-family: 'PT Sans';
 	font-weight: 400;
-	background-color: #f6f6f6;
+	background-color: #000;
 }
 
 p {
 	font-size:20px;
 }
+
+
+
+
+/***/
 
 .mycard{
 	width:50%;
@@ -20,7 +24,8 @@ p {
 }
 
 
-#main-bg {	
+#main-bg {
+	background:url("./md.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

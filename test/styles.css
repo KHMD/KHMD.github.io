@@ -5,10 +5,15 @@ body {
 	font-family: 'PT Sans';
 	font-weight: 400;
 	background-color: #000;
+	background:url("../img/md.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 p {
 	font-size:20px;
+	color:#000;
 }
 
 
@@ -16,7 +21,7 @@ p {
 
 /***/
 
-.mycard{
+.myCard{
 	width:50%;
 	margin-left:25%;
 	padding-bottom:2px;
@@ -59,7 +64,7 @@ a:hover{
 .container .myCard {
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
-	background-color: rgba(255, 255, 255, 0.2);
+
 	opacity: 0;
 	position: relative;
 	top: 50px;

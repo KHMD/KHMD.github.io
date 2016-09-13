@@ -15,9 +15,6 @@
     <!-- Bootstrap core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="./assets/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Prompt:100,400" rel="stylesheet">
 
@@ -34,7 +31,8 @@
 ================================================== -->
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar collapsed">
+        <button class="btn btn-secondary btn-lg visible-xs-block toggle"><span id="open-icon" class="glyphicon glyphicon-th-large"></span><span id="close-icon" class="glyphicon glyphicon-remove"></span></button>
         <ul class="navbar-list">
             <li><a href = "#">Events</a></li>
             <li><a href = "#">About</a></li>
@@ -46,13 +44,15 @@
     <div class="jumbotron lander">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-4 cool-sm-8 col-sm-offset-3 col-xs-12">
+                <div class="col-md-6 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-11 col-xs-offset-1">
                     <span>A PLACE FOR </span><br /><span> HACKERS </span><br /><span> MAKERS </span><br /> <span> DESIGNERS </span>
                     <div class="logo"><img src="./images/logo.png"></div>
                     <h1>KHMD</h1>
                 </div>
             </div>
         </div>
+    </div>
+    <div class ="jumbotron">
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -62,8 +62,7 @@
         window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
     </script>
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./assets/ie10-viewport-bug-workaround.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 
 </body>

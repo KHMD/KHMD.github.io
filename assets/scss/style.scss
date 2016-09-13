@@ -1,0 +1,76 @@
+/*
+/ ==================================================================
+/  Crafted for KHMD by
+/  AniMysore74 (https://github.com/AniMysore74)
+/  Based on Design by Aabharan Hemanth
+/ ==================================================================
+*/
+
+/*
+----------------------------------
+            0. Variables
+----------------------------------
+*/
+
+$font-header:    'Prompt', sans-serif;
+$font-primary:    'Arimo', sans-serif;
+$primary-color: #333;
+$navigation-color: #555;
+
+/*
+----------------------------------
+            1. BODY
+----------------------------------
+*/
+body {
+    font-family: $font-primary;
+}
+/*
+----------------------------------
+         2. NAVIGATION
+----------------------------------
+*/
+nav.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    ul {
+        list-style: none;
+        a {
+            font-size: 18px;
+            text-decoration: none;
+            color: $navigation-color;
+        }
+    }
+}
+/*
+----------------------------------
+            3. LANDER
+----------------------------------
+*/
+.lander {
+    background-color: white;
+    padding: 70px 40px;
+    span {
+        font-size: 20px;
+        line-height: 35px;
+        margin: 10px;
+        padding: 5px;
+        background-color: black;
+        color: white;
+        letter-spacing: 10px;
+
+    }
+    .logo {
+        margin: 50px 10%;
+        img {
+            max-width: 120px;
+        }
+    }
+    h1 {
+        //text-align: center;
+        font-weight: 100;
+        font-size: 120px;
+        font-family: $font-header;
+    }
+}

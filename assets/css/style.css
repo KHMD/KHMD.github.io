@@ -7,16 +7,15 @@
 */
 /*
 ----------------------------------
-            0. Variables
-----------------------------------
-*/
-/*
-----------------------------------
-            1. BODY
+         1. BASE STYLES
 ----------------------------------
 */
 body {
-  font-family: "Inconsolata", sans-serif; }
+  font-family: "Inconsolata", sans-serif;
+}
+body p {
+  font-family: "Open Sans", sans-serif;
+}
 
 /*
 ----------------------------------
@@ -29,19 +28,28 @@ nav.navbar {
   left: 0;
   z-index: 1;
   -webkit-transition: all 0.4s ease;
-          transition: all 0.4s ease; }
-  nav.navbar .toggle {
-    background-color: transparent;
-    border: none; }
-  nav.navbar ul {
-    list-style: none; }
-    nav.navbar ul a {
-      text-transform: uppercase;
-      font-weight: 100;
-      font-family: "Prompt", sans-serif;
-      font-size: 28px;
-      text-decoration: none;
-      color: #555; }
+          transition: all 0.4s ease;
+}
+nav.navbar .toggle {
+  background-color: white;
+  padding: 15px;
+  padding-bottom: 17px;
+  vertical-align: middle;
+  box-shadow: 0 0 30px 4px rgba(237, 237, 237, 0.71);
+  border: none;
+  border-radius: 40px;
+}
+nav.navbar ul {
+  list-style: none;
+}
+nav.navbar ul a {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: "Prompt", sans-serif;
+  font-size: 28px;
+  text-decoration: none;
+  color: #555;
+}
 
 /*
 ----------------------------------
@@ -50,43 +58,91 @@ nav.navbar {
 */
 .lander {
   background-color: white;
-  padding: 70px 40px; }
-  .lander span {
-    font-size: 40px;
-    line-height: 55px;
-    margin: 10px;
-    padding: 0 15px;
-    background-color: black;
-    color: white;
-    letter-spacing: 10px; }
-  .lander .logo {
-    margin: 50px 10%; }
-    .lander .logo img {
-      max-width: 200px; }
-  .lander h1 {
-    font-weight: 100;
-    font-size: 140px;
-    font-family: "Prompt", sans-serif; }
+  padding: 70px 40px;
+}
+.lander span {
+  font-size: 40px;
+  line-height: 55px;
+  margin: 10px;
+  padding: 0 15px;
+  background-color: black;
+  color: white;
+  letter-spacing: 10px;
+}
+.lander .logo {
+  margin: 50px 10%;
+}
+.lander .logo img {
+  max-width: 200px;
+}
+.lander h1 {
+  font-weight: 100;
+  font-size: 140px;
+  font-family: "Prompt", sans-serif;
+}
+
+/*
+----------------------------------
+            4. ABOUT
+----------------------------------
+*/
+.about {
+  background-color: white;
+}
+.about header {
+  margin: 10px 0;
+}
+.about header span {
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  letter-spacing: 8px;
+}
+.about .video-wrapper {
+  margin: 40px 0;
+  text-align: center;
+}
+.about .video-wrapper iframe {
+  height: 265px;
+  width: auto;
+}
+.about article {
+  margin: 10px 0;
+}
+.about article p {
+  text-align: justify;
+}
+.about article blockquote {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
 
 /*
 ----------------------------------
         7. RESPONSIVENESS
 ----------------------------------
 */
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   nav.collapsed {
     top: 3em;
     bottom: auto;
     height: auto;
     background-color: transparent;
     padding: 0;
-    text-align: left; }
-    nav.collapsed #close-icon {
-      display: none; }
-    nav.collapsed #open-icon {
-      display: block; }
-    nav.collapsed ul {
-      display: none; }
+    text-align: left;
+  }
+  nav.collapsed #close-icon {
+    display: none;
+  }
+  nav.collapsed #open-icon {
+    display: block;
+  }
+  nav.collapsed ul {
+    display: none;
+  }
 
   nav.open {
     top: 0;
@@ -95,32 +151,45 @@ nav.navbar {
     height: 100vh;
     background-color: white;
     padding: 40px 0;
-    text-align: center; }
-    nav.open #close-icon {
-      display: block; }
-    nav.open #open-icon {
-      display: none; }
-    nav.open ul {
-      display: block;
-      padding: 0; }
-      nav.open ul a {
-        font-size: 30px;
-        line-height: 60px; }
-
+    text-align: center;
+  }
+  nav.open #close-icon {
+    display: block;
+  }
+  nav.open #open-icon {
+    display: none;
+  }
+  nav.open ul {
+    display: block;
+    padding: 0;
+  }
+  nav.open ul a {
+    font-size: 30px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 767px) {
   .lander span {
     font-size: 30px;
     line-height: 45px;
-    padding: 0 10px; }
+    padding: 0 10px;
+  }
   .lander h1 {
-    font-size: 100px; } }
+    font-size: 100px;
+  }
+}
 @media (max-width: 484px) {
   .lander {
     padding-left: 0;
-    padding-right: 0; }
-    .lander span {
-      font-size: 25px;
-      line-height: 40px; }
-    .lander h1 {
-      font-size: 80px; } }
+    padding-right: 0;
+  }
+  .lander span {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .lander h1 {
+    font-size: 80px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

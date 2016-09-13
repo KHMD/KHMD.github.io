@@ -6,24 +6,26 @@
 / ==================================================================
 */
 
-/*
-----------------------------------
-            0. Variables
-----------------------------------
-*/
-
+//----------------------------------
+//          0. Variables
+//----------------------------------
+//(Single line comments are SCSS only. Removed during compilation)
 $font-header: 'Prompt', sans-serif;
 $font-primary: 'Inconsolata', sans-serif;
+$font-paragraph: 'Open Sans', sans-serif;
 $primary-color: #333;
 $navigation-color: #555;
 
 /*
 ----------------------------------
-            1. BODY
+         1. BASE STYLES
 ----------------------------------
 */
 body {
     font-family: $font-primary;
+    p {
+        font-family: $font-paragraph;
+    }
 }
 /*
 ----------------------------------
@@ -37,8 +39,13 @@ nav.navbar {
     z-index: 1;
     transition: all 0.4s ease;
     .toggle {
-        background-color: transparent;
+        background-color: white;
+        padding: 15px;
+        padding-bottom: 17px;
+        vertical-align: middle;
+        box-shadow: 0 0 30px 4px rgba(237, 237, 237, 0.71);
         border: none;
+        border-radius: 40px;
     }
     ul {
         list-style: none;
@@ -85,10 +92,48 @@ nav.navbar {
 }
 /*
 ----------------------------------
+            4. ABOUT
+----------------------------------
+*/
+.about {
+    background-color: white;
+    header {
+        margin: 10px 0;
+        span {
+            text-transform: uppercase;
+            padding: 0 15px;
+            font-size: 30px;
+            background-color: black;
+            color: white;
+            letter-spacing: 8px;
+        }
+    }
+    .video-wrapper {
+        margin: 40px 0;
+        text-align: center;
+        iframe {
+            height: 265px;
+            width: auto;
+        }
+    }
+    article {
+        margin: 10px 0;
+        p {
+            text-align: justify;
+        }
+        blockquote {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+    }
+}
+/*
+----------------------------------
         7. RESPONSIVENESS
 ----------------------------------
 */
-@media (max-width:767px) {
+@media (max-width:991px) {
     nav.collapsed {
         top: 3em;
         bottom: auto;
@@ -129,6 +174,8 @@ nav.navbar {
             }
         }
     }
+}
+@media (max-width:767px) {
     .lander {
         span {
             font-size: 30px;

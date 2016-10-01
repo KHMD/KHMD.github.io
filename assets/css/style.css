@@ -23,7 +23,7 @@ body p {
 ----------------------------------
 */
 nav.navbar {
-  position: fixed;
+  position: absolute;
   top: 3em;
   left: 0;
   z-index: 1;
@@ -36,7 +36,7 @@ nav.navbar .toggle {
   padding-bottom: 17px;
   vertical-align: middle;
   box-shadow: 0 0 30px 4px rgba(237, 237, 237, 0.71);
-  border: none;
+  border: 2px solid #FE7F00;
   border-radius: 40px;
 }
 nav.navbar ul {
@@ -88,17 +88,8 @@ nav.navbar ul a {
 */
 .about {
   background-color: white;
-}
-.about header {
-  margin: 10px 0;
-}
-.about header span {
-  text-transform: uppercase;
-  padding: 0 15px;
-  font-size: 30px;
-  background-color: black;
-  color: white;
-  letter-spacing: 8px;
+  border-top: 5px double #FE7F00;
+  border-bottom: 5px double #FE7F00;
 }
 .about .video-wrapper {
   margin: 40px 0;
@@ -108,16 +99,89 @@ nav.navbar ul a {
   height: 265px;
   width: auto;
 }
-.about article {
+
+.text-box header {
   margin: 10px 0;
 }
-.about article p {
-  text-align: justify;
+.text-box header span {
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  letter-spacing: 8px;
 }
-.about article blockquote {
+.text-box header span.crystal {
+  background-color: rgba(165, 165, 165, 0.78);
+}
+.text-box article {
+  margin: 10px 0;
+}
+.text-box article blockquote {
+  color: #FE7F00;
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  border-radius: 5px;
+  background-color: rgba(184, 184, 184, 0.33);
+  letter-spacing: 2px;
+}
+.text-box article a {
+  font-size: 20px;
+  color: #FE7F00;
+}
+
+/*
+----------------------------------
+            5. EVENTS
+----------------------------------
+*/
+.events {
+  min-height: 100vh;
+  background-color: white;
+}
+.events h1 {
+  text-transform: uppercase;
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+}
+
+/*
+----------------------------------
+            6. FOOTER
+----------------------------------
+*/
+footer {
+  background-color: #d9d9d9;
+  padding: 40px 0;
+  border-top: 5px double #FE7F00;
+}
+footer h1 {
+  font-weight: 100;
+  font-family: "Prompt", sans-serif;
+}
+footer h1 .logo img {
+  max-width: 60px;
+  margin: 0 20px;
+}
+footer h1 a {
+  color: #FE7F00;
+  text-decoration: none;
+}
+footer h1 a:hover, footer h1 a:focus {
+  color: #FE7F00;
+  text-decoration: underline;
+}
+footer h1 span {
+  text-transform: uppercase;
+  font-family: "Inconsolata", sans-serif;
+  font-size: 25px;
+  line-height: 40px;
+  margin: 10px;
+  padding: 0 15px;
+  background-color: black;
+  color: white;
+  letter-spacing: 10px;
 }
 
 /*
@@ -127,6 +191,7 @@ nav.navbar ul a {
 */
 @media (max-width: 991px) {
   nav.collapsed {
+    position: fixed;
     top: 3em;
     bottom: auto;
     height: auto;
@@ -145,6 +210,7 @@ nav.navbar ul a {
   }
 
   nav.open {
+    position: fixed;
     top: 0;
     bottom: 0;
     width: 100%;

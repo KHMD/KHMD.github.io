@@ -4,6 +4,10 @@
 /  AniMysore74 (https://github.com/AniMysore74)
 /  Based on Design by Aabharan Hemanth
 / ==================================================================
+/
+/ ==================================================================
+/  DONT EDIT CSS DIRECTLY. MAKE CHANGES IN SCSS FILE AND COMPILE
+/ ==================================================================
 */
 
 //----------------------------------
@@ -155,6 +159,9 @@ nav.navbar {
         text-transform: uppercase;
         font-family: $font-header;
         font-weight: 100;
+    }
+    .event-item {
+        margin: 10px 0;
     }
 }
 /*

@@ -15,11 +15,8 @@
     <!-- Bootstrap core CSS -->
     <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="./assets/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Prompt:100,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Inconsolata|Prompt:100,400" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,19 +31,20 @@
 ================================================== -->
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar collapsed">
+        <button class="btn btn-secondary btn-lg visible-xs-block toggle"><span id="open-icon" class="glyphicon glyphicon-th-large"></span><span id="close-icon" class="glyphicon glyphicon-remove"></span></button>
         <ul class="navbar-list">
-            <li><a href = "#">Events</a></li>
-            <li><a href = "#">About</a></li>
-            <li><a href = "#">Contact</a></li>
-            <li><a href = "#">Blog</a></li>
-            <li><a href = "#">Interface</a></li>
+            <li><a href = "#home">Home</a></li>
+            <li><a href = "#about">About</a></li>
+            <li><a href = "#events">Events</a></li>
+            <li><a href="http://kumaranhmd.blogspot.in">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <div class="jumbotron lander">
+    <div id="home" class="jumbotron lander">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-4 cool-sm-8 col-sm-offset-3 col-xs-12">
+                <div class="col-md-6 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-11 col-xs-offset-1">
                     <span>A PLACE FOR </span><br /><span> HACKERS </span><br /><span> MAKERS </span><br /> <span> DESIGNERS </span>
                     <div class="logo"><img src="./images/logo.png"></div>
                     <h1>KHMD</h1>
@@ -54,6 +52,131 @@
             </div>
         </div>
     </div>
+    <div id="about" class ="jumbotron about text-box" style="background-image:url('./images/sativa/sativa.png')">
+        <div class="container">
+            <header>
+                <span>About Us</span>
+                <br />
+                <span>where we make everything</span> <span class="crystal"> clear</span>
+            </header>
+            <div class="video-wrapper" data-id="7sw-G5Vdd6o">
+                            <p> Hello </p>
+            </div>
+            <article>
+                <p>
+                    KHMD is a student-centric platform developed and managed by a group of like-minded students of Kumarans who believe in the Hacker culture. It is aimed at the tech enthusiasts and beginners to nurture their skills and foster their interest in science and technology. We provide a platform for students in Kumarans to interact with experts and build their own projects. KHMD is the place where beginners can learn new things in the world of technology and more experienced seniors and experts can mentor them.
+                </p>
+                <p>
+                    We work on various projects in diverse areas of technology like Arduino, Web, Android and Design among others. We also work on introducing less interested students to the amazing fields of science and technology. Technology is everywhere and everyone has the creativity and imagination to create something new and exciting with technology.  All he/she needs is the support and freedom to do this.  We want to build a community of individuals in school who want to create technology to help each other and the whole world.
+                </p>
+                <p>
+                    Our core belief is:
+                </p>
+                <blockquote>Creation > Consumption</blockquote>
+            </article>
+        </div>
+    </div>
+    <div id="events" class="jumbotron events">
+        <div class="container">
+            <h1> Upcoming Events </h1>
+            <!-- Add each event in the same format -->
+            <!-- Interface 2016 -->
+            <div class = "event-item text-box">
+                <header>
+                    <span>Interface 2016</span>
+                </header>
+                <article>
+                    <p>
+                        KHMD's flagship event.
+                    </p>
+                </article>
+            </div>
+            <!-- Think Tank -->
+            <div class = "event-item text-box">
+                <header>
+                    <span>Think Tank</span>
+                </header>
+                <article>
+                    <p>
+                        People around the world face a variety of serious problems everyday. One of the major solutions to this is technology. In this contest, we want to see how you can harness the power of technology to solve such problems. So, put your thinking caps on and change the world!
+                    </p>
+                    <p>
+                        The most feasible solutions will be implemented by Reap Benefit and other NGOs under UN's Youth Forums Program. The best ideas will be selected for CBSE Science Fair by a jury of judges on 15th October.
+                    </p>
+                    <p>
+                        This contest is open to students of grades 8-12 across all Kumarans branches in teams of two.
+                    </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfExu8AlPBxpq7U7fRcmy714AqGIBaCXNvaBXCnXxqKsZHwsQ/viewform?c=0&w=1" target="_blank"> Click Here to Register for Think Tank </a>
+
+                </article>
+            </div>
+
+            <h1> Past events </h1>
+            <!-- Add each event in the same format -->
+            <!-- Ignite 2016 -->
+            <div class = "event-item text-box">
+                <header>
+                    <span>Ignite 2016</span>
+                </header>
+                <article>
+                    <p>
+                        Ignite
+                    </p>
+                </article>
+            </div>
+            <!-- Interface 2015 -->
+            <div class = "event-item text-box">
+                <header>
+                    <span>Interface 2015</span>
+                </header>
+                <article>
+                    <p>
+                        Interface 2015
+                    </p>
+                </article>
+            </div>
+            <!-- Infuse 2015 -->
+            <div class = "event-item text-box">
+                <header>
+                    <span>Infuse 2015</span>
+                </header>
+                <article>
+                    <p>
+                        Infuse
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer id="contact" class="footer" style="background-image:url('./images/sativa/sativa.png')">
+        <div class="container">
+            <header class="visible-md visible-lg visible-sm">
+                <h1>
+                    <div class="logo"><img src="./images/logo.png">
+                        KHMD |
+                        <a id="blog" href = "http://kumaranhmd.blogspot.com">Blog</a> |
+                        <a href = "https://plus.google.com/u/0/communities/115383468547937742588">Community</a> |
+                        <a id="contact" href="">Contact</a>
+                    </div>
+                    <span>For Hackers makers and designers</span>
+                </h1>
+            </header>
+            <div class = "row visible-xs">
+                <div class = "col-xs-3">
+                    <h1><div class="logo"><img src="./images/logo.png"></div></h1>
+                </div>
+                <div class = "col-xs-9">
+                    <h1>KHMD</h1>
+                    <h1><a id="blog" href = "http://kumaranhmd.blogspot.com">Blog</a> |
+                        <a href = "https://plus.google.com/u/0/communities/115383468547937742588">Community</a> |
+                        <a id="contact" href="">Contact</a> |
+                    </h1>
+                    <h1><span>For Hackers </span><span> makers </span><span> designers</span>
+</h1>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -62,8 +185,7 @@
         window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
     </script>
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./assets/ie10-viewport-bug-workaround.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 
 </body>

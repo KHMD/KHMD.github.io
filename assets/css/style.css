@@ -4,19 +4,22 @@
 /  AniMysore74 (https://github.com/AniMysore74)
 /  Based on Design by Aabharan Hemanth
 / ==================================================================
+/
+/ ==================================================================
+/  DONT EDIT CSS DIRECTLY. MAKE CHANGES IN SCSS FILE AND COMPILE
+/ ==================================================================
 */
 /*
 ----------------------------------
-            0. Variables
-----------------------------------
-*/
-/*
-----------------------------------
-            1. BODY
+         1. BASE STYLES
 ----------------------------------
 */
 body {
-  font-family: "Inconsolata", sans-serif; }
+  font-family: "Inconsolata", sans-serif;
+}
+body p {
+  font-family: "Open Sans", sans-serif;
+}
 
 /*
 ----------------------------------
@@ -25,14 +28,32 @@ body {
 */
 nav.navbar {
   position: absolute;
-  top: 0;
-  left: 0; }
-  nav.navbar ul {
-    list-style: none; }
-    nav.navbar ul a {
-      font-size: 18px;
-      text-decoration: none;
-      color: #555; }
+  top: 3em;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+}
+nav.navbar .toggle {
+  background-color: white;
+  padding: 15px;
+  padding-bottom: 17px;
+  vertical-align: middle;
+  box-shadow: 0 0 30px 4px rgba(237, 237, 237, 0.71);
+  border: 2px solid #FE7F00;
+  border-radius: 40px;
+}
+nav.navbar ul {
+  list-style: none;
+}
+nav.navbar ul a {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: "Prompt", sans-serif;
+  font-size: 28px;
+  text-decoration: none;
+  color: #555;
+}
 
 /*
 ----------------------------------
@@ -41,22 +62,206 @@ nav.navbar {
 */
 .lander {
   background-color: white;
-  padding: 70px 40px; }
+  padding: 70px 40px;
+}
+.lander span {
+  font-size: 40px;
+  line-height: 55px;
+  margin: 10px;
+  padding: 0 15px;
+  background-color: black;
+  color: white;
+  letter-spacing: 10px;
+}
+.lander .logo {
+  margin: 50px 10%;
+}
+.lander .logo img {
+  max-width: 200px;
+}
+.lander h1 {
+  font-weight: 100;
+  font-size: 140px;
+  font-family: "Prompt", sans-serif;
+}
+
+/*
+----------------------------------
+            4. ABOUT
+----------------------------------
+*/
+.about {
+  background-color: white;
+  border-top: 5px double #FE7F00;
+  border-bottom: 5px double #FE7F00;
+}
+.about .video-wrapper {
+  margin: 40px 0;
+  text-align: center;
+}
+.about .video-wrapper iframe {
+  height: 265px;
+  width: auto;
+}
+
+.text-box header {
+  margin: 10px 0;
+}
+.text-box header span {
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  letter-spacing: 8px;
+}
+.text-box header span.crystal {
+  background-color: rgba(165, 165, 165, 0.78);
+}
+.text-box article {
+  margin: 10px 0;
+}
+.text-box article blockquote {
+  color: #FE7F00;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: rgba(184, 184, 184, 0.33);
+  letter-spacing: 2px;
+}
+.text-box article a {
+  font-size: 20px;
+  color: #FE7F00;
+}
+
+/*
+----------------------------------
+            5. EVENTS
+----------------------------------
+*/
+.events {
+  min-height: 100vh;
+  background-color: white;
+}
+.events h1 {
+  text-transform: uppercase;
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+}
+.events .event-item {
+  margin: 10px 0;
+}
+
+/*
+----------------------------------
+            6. FOOTER
+----------------------------------
+*/
+footer {
+  background-color: #d9d9d9;
+  padding: 40px 0;
+  border-top: 5px double #FE7F00;
+}
+footer h1 {
+  font-weight: 100;
+  font-family: "Prompt", sans-serif;
+}
+footer h1 .logo img {
+  max-width: 60px;
+  margin: 0 20px;
+}
+footer h1 a {
+  color: #FE7F00;
+  text-decoration: none;
+}
+footer h1 a:hover, footer h1 a:focus {
+  color: #FE7F00;
+  text-decoration: underline;
+}
+footer h1 span {
+  text-transform: uppercase;
+  font-family: "Inconsolata", sans-serif;
+  font-size: 25px;
+  line-height: 40px;
+  margin: 10px;
+  padding: 0 15px;
+  background-color: black;
+  color: white;
+  letter-spacing: 10px;
+}
+
+/*
+----------------------------------
+        7. RESPONSIVENESS
+----------------------------------
+*/
+@media (max-width: 991px) {
+  nav.collapsed {
+    position: fixed;
+    top: 3em;
+    bottom: auto;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    text-align: left;
+  }
+  nav.collapsed #close-icon {
+    display: none;
+  }
+  nav.collapsed #open-icon {
+    display: block;
+  }
+  nav.collapsed ul {
+    display: none;
+  }
+
+  nav.open {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    padding: 40px 0;
+    text-align: center;
+  }
+  nav.open #close-icon {
+    display: block;
+  }
+  nav.open #open-icon {
+    display: none;
+  }
+  nav.open ul {
+    display: block;
+    padding: 0;
+  }
+  nav.open ul a {
+    font-size: 30px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 767px) {
   .lander span {
-    font-size: 20px;
-    line-height: 35px;
-    margin: 10px;
-    padding: 5px;
-    background-color: black;
-    color: white;
-    letter-spacing: 10px; }
-  .lander .logo {
-    margin: 50px 10%; }
-    .lander .logo img {
-      max-width: 120px; }
+    font-size: 30px;
+    line-height: 45px;
+    padding: 0 10px;
+  }
   .lander h1 {
-    font-weight: 100;
-    font-size: 120px;
-    font-family: "Prompt", sans-serif; }
+    font-size: 100px;
+  }
+}
+@media (max-width: 484px) {
+  .lander {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .lander span {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .lander h1 {
+    font-size: 80px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

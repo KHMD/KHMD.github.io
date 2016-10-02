@@ -4,26 +4,32 @@
 /  AniMysore74 (https://github.com/AniMysore74)
 /  Based on Design by Aabharan Hemanth
 / ==================================================================
+/
+/ ==================================================================
+/  DONT EDIT CSS DIRECTLY. MAKE CHANGES IN SCSS FILE AND COMPILE
+/ ==================================================================
 */
 
-/*
-----------------------------------
-            0. Variables
-----------------------------------
-*/
-
-$font-header:    'Prompt', sans-serif;
-$font-primary:    'Inconsolata', sans-serif;
-$primary-color: #333;
+//----------------------------------
+//          0. Variables
+//----------------------------------
+//(Single line comments are SCSS only. Removed during compilation)
+$font-header: 'Prompt', sans-serif;
+$font-primary: 'Inconsolata', sans-serif;
+$font-paragraph: 'Open Sans', sans-serif;
+$khmd-theme: #FE7F00;
 $navigation-color: #555;
 
 /*
 ----------------------------------
-            1. BODY
+         1. BASE STYLES
 ----------------------------------
 */
 body {
     font-family: $font-primary;
+    p {
+        font-family: $font-paragraph;
+    }
 }
 /*
 ----------------------------------
@@ -32,12 +38,26 @@ body {
 */
 nav.navbar {
     position: absolute;
-    top: 0;
+    top: 3em;
     left: 0;
+    z-index: 1;
+    transition: all 0.4s ease;
+    .toggle {
+        background-color: white;
+        padding: 15px;
+        padding-bottom: 17px;
+        vertical-align: middle;
+        box-shadow: 0 0 30px 4px rgba(237, 237, 237, 0.71);
+        border: 2px solid $khmd-theme;
+        border-radius: 40px;
+    }
     ul {
         list-style: none;
         a {
-            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 100;
+            font-family: $font-header;
+            font-size: 28px;
             text-decoration: none;
             color: $navigation-color;
         }
@@ -52,10 +72,10 @@ nav.navbar {
     background-color: white;
     padding: 70px 40px;
     span {
-        font-size: 20px;
-        line-height: 35px;
+        font-size: 40px;
+        line-height: 55px;
         margin: 10px;
-        padding: 5px;
+        padding: 0 15px;
         background-color: black;
         color: white;
         letter-spacing: 10px;
@@ -64,13 +84,196 @@ nav.navbar {
     .logo {
         margin: 50px 10%;
         img {
-            max-width: 120px;
+            max-width: 200px;
         }
     }
     h1 {
         //text-align: center;
         font-weight: 100;
-        font-size: 120px;
+        font-size: 140px;
         font-family: $font-header;
+    }
+}
+/*
+----------------------------------
+            4. ABOUT
+----------------------------------
+*/
+.about {
+    background-color: white;
+    border-top: 5px double $khmd-theme;
+    border-bottom: 5px double $khmd-theme;
+    .video-wrapper {
+        margin: 40px 0;
+        text-align: center;
+        iframe {
+            height: 265px;
+            width: auto;
+        }
+    }
+}
+.text-box {
+    header {
+        margin: 10px 0;
+        span {
+            text-transform: uppercase;
+            padding: 0 15px;
+            font-size: 30px;
+            background-color: black;
+            color: white;
+            letter-spacing: 8px;
+        }
+        span.crystal {
+            background-color: rgba(165, 165, 165, 0.78);
+        }
+    }
+    article {
+        margin: 10px 0;
+        p {
+
+        }
+        blockquote {
+            color: $khmd-theme;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 5px;
+            background-color: rgba(184, 184, 184, 0.33);
+            letter-spacing: 2px;
+        }
+        a {
+            font-size: 20px;
+            color: $khmd-theme;
+        }
+    }
+}
+/*
+----------------------------------
+            5. EVENTS
+----------------------------------
+*/
+.events {
+    min-height: 100vh;
+    background-color: white;
+    h1 {
+        text-transform: uppercase;
+        font-family: $font-header;
+        font-weight: 100;
+    }
+    .event-item {
+        margin: 10px 0;
+    }
+}
+/*
+----------------------------------
+            6. FOOTER
+----------------------------------
+*/
+footer {
+    background-color: #d9d9d9;
+    padding: 40px 0;
+    border-top: 5px double $khmd-theme;
+    h1{
+        font-weight: 100;
+        font-family: $font-header;
+        .logo {
+            img {
+                max-width: 60px;
+                margin: 0 20px;
+            }
+        }
+        a {
+            color: $khmd-theme;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            color: $khmd-theme;
+            text-decoration: underline;
+        }
+        span {
+            text-transform: uppercase;
+            font-family: $font-primary;
+            font-size: 25px;
+            line-height: 40px;
+            margin: 10px;
+            padding: 0 15px;
+            background-color: black;
+            color: white;
+            letter-spacing: 10px;
+
+        }
+    }
+}
+/*
+----------------------------------
+        7. RESPONSIVENESS
+----------------------------------
+*/
+@media (max-width:991px) {
+    nav.collapsed {
+        position: fixed;
+        top: 3em;
+        bottom: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        text-align: left;
+        #close-icon {
+            display: none;
+        }
+        #open-icon {
+            display: block;
+        }
+        ul {
+            display: none;
+        }
+    }
+    nav.open {
+        position: fixed;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        padding: 40px 0;
+        text-align: center;
+        #close-icon {
+            display: block;
+        }
+        #open-icon {
+            display: none;
+        }
+        ul {
+            display: block;
+            padding: 0;
+            a {
+                font-size: 30px;
+                line-height: 60px;
+            }
+        }
+    }
+}
+@media (max-width:767px) {
+    .lander {
+        span {
+            font-size: 30px;
+            line-height: 45px;
+            padding: 0 10px;
+        }
+        h1 {
+            font-size: 100px;
+        }
+    }
+}
+@media (max-width:484px) {
+    .lander {
+        padding-left: 0;
+        padding-right: 0;
+        span {
+            font-size: 25px;
+            line-height: 40px;
+        }
+        h1 {
+            font-size: 80px;
+        }
     }
 }

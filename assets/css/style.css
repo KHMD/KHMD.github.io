@@ -190,6 +190,12 @@ footer h1 span {
   letter-spacing: 10px;
 }
 
+.contact-modal .modal-header {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  border-bottom: 5px double #FE7F00;
+}
+
 /*
 ----------------------------------
         7. RESPONSIVENESS

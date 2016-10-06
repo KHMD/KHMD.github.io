@@ -203,6 +203,13 @@ footer {
         }
     }
 }
+.contact-modal {
+    .modal-header {
+        font-family: $font-header;
+        font-weight: 100;
+        border-bottom: 5px double $khmd-theme;
+    }
+}
 /*
 ----------------------------------
         7. RESPONSIVENESS

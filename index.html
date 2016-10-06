@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -35,13 +34,13 @@
 
 <body>
     <nav class="navbar collapsed">
-        <button class="btn btn-secondary btn-lg visible-xs-block toggle"><span id="open-icon" class="glyphicon glyphicon-th-large"></span><span id="close-icon" class="glyphicon glyphicon-remove"></span></button>
+        <button class="btn btn-secondary btn-lg visible-xs-block visible-sm-block toggle"><span id="open-icon" class="glyphicon glyphicon-th-large"></span><span id="close-icon" class="glyphicon glyphicon-remove"></span></button>
         <ul class="navbar-list">
             <li><a href = "#home">Home</a></li>
             <li><a href = "#about">About</a></li>
             <li><a href = "#events">Events</a></li>
             <li><a href="http://kumaranhmd.blogspot.in">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="myModal" data-toggle="modal" data-target="#myModal">Contact</a></li>
         </ul>
     </nav>
     <div id="home" class="jumbotron lander">
@@ -169,7 +168,7 @@
                         KHMD |
                         <a id="blog" href = "http://kumaranhmd.blogspot.com">Blog</a> |
                         <a href = "https://plus.google.com/u/0/communities/115383468547937742588">Community</a> |
-                        <a id="contact" href="">Contact</a>
+                        <a id="contact" href="" data-toggle="modal" data-target="#myModal">Contact</a>
                     </div>
                     <span>For Hackers makers and designers</span>
                 </h1>
@@ -182,7 +181,7 @@
                     <h1>KHMD</h1>
                     <h1><a id="blog" href = "http://kumaranhmd.blogspot.com">Blog</a> |
                         <a href = "https://plus.google.com/u/0/communities/115383468547937742588">Community</a> |
-                        <a id="contact" href="">Contact</a> |
+                        <a id="contact" href="myModal" data-toggle="modal" data-target="#myModal">Contact</a> |
                     </h1>
                     <h1><span>For Hackers </span><span> makers </span><span> designers</span>
 </h1>
@@ -190,6 +189,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade contact-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Contact KHMD</h4>
+          </div>
+          <div class="modal-body">
+            <p>If you have any queries, email <a href = "mailto:khmd.skch@gmail.com">khmd.skch@gmail.com</a>
+                Optionally, you can contact any KHMD member in school.</p>
+          </div>
+      </div>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
